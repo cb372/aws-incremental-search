@@ -12,9 +12,13 @@ function filterServiceLinks(query) {
 
 function updateMatchingLinks(matching) {
   matchingLinks = matching;
+
+  serviceLinks.css('color', '');
   serviceLinks.css('background', '');
-  matchingLinks.css('background', 'rgba(54, 25, 25, .1)');
-  matchingLinks.first().css('background', 'rgba(54, 25, 25, .3)');
+
+  matchingLinks.css('color', 'yellow');
+  matchingLinks.css('background', 'rgba(54, 25, 25, .3)');
+  matchingLinks.first().css('background', 'rgba(54, 25, 25, .6)');
 }
 
 searchBox.bind('keyup', function() {
